@@ -1,69 +1,57 @@
-Get PRO Here:
-https://templatesjungle.gumroad.com/l/julia-onepage-portfolio
+# My Portfolio Website
 
-It is a free HTML CSS template by TemplatesJungle.com
-You can use this template as a starter template and start building as you require.
+Welcome to my personal portfolio repository! This repository hosts my live portfolio website where you can explore my work, skills, and contact information.
 
-The code is consistent and can be easily maintained as we have followed a good coding standards. We want everyone to easily understand it and modify it according to their requirement. As the main goal of providing these templates is to give you something to work on before even starting.
+## Live Website
+You can view the live version of my portfolio here:
+[https://neilianaller.github.io/ian](https://neilianaller.github.io/ian)
 
+## About Me
+I am a **Graphic Designer and Full-Stack Developer** with experience in:
 
-FREE FOR BOTH PERSONAL AND COMMERCIAL USE
+- Web and Mobile Application Development
+- UI/UX and Visual Design
+- PHP, JavaScript, HTML, CSS, and modern frameworks
+- Database design and management
 
-This HTML Template is provided by TemplatesJungle.com and is free to use in both personal and commercial projects as long as you don't remove our credit link in the footer.
+I combine creativity and technical skills to build visually appealing and functional applications.
 
-However, you can remove the credit link by paying for No Attribution version of the template.
+## Features of This Portfolio
+- Showcase of projects and big clients/partners
+- Responsive design for desktop and mobile
+- Interactive contact section
+- Links to social media and email
 
+## Technology Stack
+- HTML, CSS, JavaScript
+- PHP (for dynamic content, if any)
+- GitHub Pages for hosting (static files)
+- Optional libraries/frameworks used: (e.g., Bootstrap, AdminLTE, jQuery)
 
-RIGHTS
+## How to Use / Clone
+If you want to view or modify the code locally:
 
-You are allowed to use it in your personal projects and commercial projects.
+```bash
+git clone https://github.com/neilianaller/ian.git
+cd ian
+# Open index.html in your browser to view locally
 
-You can modify and sell it to your clients.
+Contact
 
+You can reach me via email or social media:
 
-PROHIBITIONS
+Email: neiliandsigns@gmail.com
 
-You cannot remove the credit link which links back to templatesjungle.com.
-
-You are not permitted to resell or redistribute (paid or free) as it is. 
-
-You cannot use it to build premium templates, themes or any other goods to be sold on marketplaces.
-
-If you want to share the free resource in your blog, you must point it to original TemplatesJungle.com resource page. 
-
-You cannot host the download file in your website.
-
-
-SUPPORT
-
-You can contact us to report any bugs and errors in the template. We will try and fix them immediately although it's a free resource.
-
-Feel free to let us know about what you want to see in the future downloads. We will definitely give it a thought while creating our next freebie.
-
-
-CREDITS & REFERENCES
-
-https://getbootstrap.com/
-
-Stock Photos
-https://unsplash.com/
-https://www.freepik.com/
-https://www.pexels.com/
-
-Fonts
-Google fonts
-https://fonts.google.com/
-
-Icons
-https://icomoon.io/
-
-JQuery Plugins
-
-Swiper Slider - https://swiperjs.com/
-Slick Slider - https://kenwheeler.github.io/slick/
-Chocolat.js – a Free Lightbox Plugin -http://chocolat.insipi.de/
-Magnific Lightbox - https://github.com/dimsemenov/Magnific-Popup
-
-Thanks for downloading from TemplatesJungle.com !
+GitHub: https://github.com/neilianaller
 
 
+
+---
+
+Big thanks to TemplatesJungle 
+
+---
+
+Thank you for visiting my portfolio!
+
+---
