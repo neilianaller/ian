@@ -33,7 +33,7 @@ If you want to view or modify the code locally:
 ```bash
 git clone https://github.com/neilianaller/ian.git
 cd ian
-# Open index.html in your browser to view locally
+Open index.html in your browser to view locally
 ```
 
 ## Contact
