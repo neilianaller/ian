@@ -47,7 +47,7 @@ GitHub: **https://github.com/neilianaller**
 
 ----
 
-## Big thanks to TemplatesJungle [https://templatesjungle.com/] for the template inspiration.
+## Big thanks to [https://templatesjungle.com](TemplatesJungle) for the HTML template.
 
 ----
 
