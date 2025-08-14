@@ -19,7 +19,6 @@ I combine creativity and technical skills to build visually appealing and functi
 ## Features of This Portfolio
 - Showcase of projects and big clients/partners
 - Responsive design for desktop and mobile
-- Interactive contact section
 - Links to social media and email
 
 ## Technology Stack
