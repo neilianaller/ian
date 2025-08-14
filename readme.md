@@ -24,9 +24,8 @@ I combine creativity and technical skills to build visually appealing and functi
 
 ## Technology Stack
 - HTML, CSS, JavaScript
-- PHP (for dynamic content, if any)
 - GitHub Pages for hosting (static files)
-- Optional libraries/frameworks used: (e.g., Bootstrap, AdminLTE, jQuery)
+- Libraries/frameworks used: (Bootstrap, AJAX, jQuery)
 
 ## How to Use / Clone
 If you want to view or modify the code locally:
