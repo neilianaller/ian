@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body {
+    font-family: 'Google Sans';
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.brand-main {
+    /* Clamps between 64px and 200px based on screen size */
+    font-size: clamp(4rem, 18vw, 12.5rem);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.brand-sub {
+    font-size: clamp(0.875rem, 3vw, 2rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.8em;
+    color: #888;
+    margin-right: -0.6em;
+    /* Offsets the letter spacing to keep it centered */
+}
+
+/* Chevron Container */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-text {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #aaa;
+    margin-bottom: 10px;
+    margin-right: -0.3em;
+    /* Center correction */
+    transition: color 0.3s ease;
+}
+
+.chevron {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 30px;
+    height: 30px;
+    animation: bounce 2s infinite;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.scroll-indicator:hover .scroll-text {
+    color: #212529;
+}
+
+.scroll-indicator:hover .chevron {
+    stroke: #000;
+    transform: translateY(5px);
+    animation-play-state: paused;
+    /* Stops bouncing on hover */
+}
+
+/* Gentle Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Layout & Sections */
+.section-padding {
+    padding: 120px 0;
+}
+
+/* Button Styling */
+.btn-iandev {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 0;
+    /* Sharp edges for minimalist look */
+    transition: all 0.3s ease;
+}
+
+.btn-primary-dev {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.btn-primary-dev:hover {
+    background-color: #212529;
+    transform: translateY(-3px);
+    color: white;
+}
+
+.btn-secondary-dev {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #eee;
+}
+
+.btn-secondary-dev:hover {
+    border-color: #000;
+    background-color: #fafafa;
+}
+
+/* Services Small Header */
+.service-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+/* Solutions Grid */
+.solution-box {
+    border: 1px solid #f0f0f0;
+    padding: 60px 40px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #fff;
+}
+
+.solution-box:hover {
+    border-color: #000;
+    background: #212529;
+}
+
+.solution-box:hover h3,
+.solution-box:hover p {
+    color: #fff !important;
+}
+
+.solution-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ccc;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-input {
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    background: transparent;
+}
+
+.contact-input:focus {
+    box-shadow: none;
+    border-bottom-color: #000;
+    background: transparent;
+}
+
+.form-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #aaa;
+    margin-top: 1rem;
+}
+
+/* Centered Logo Adjustment */
+.navbar {
+    padding: 30px 0;
+    /* Slightly more breathing room for a solo logo */
+    background: white;
+    /* Keeping it clean over the hero */
+}
+
+.navbar-logo {
+    height: 40px;
+    /* Slightly larger since it's the solo element */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Ensure navbar-brand doesn't have default Bootstrap padding that offsets the center */
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+/* Section Headers */
+.category-header {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: #000;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 3rem;
+}
+
+/* Service List Styling */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.service-list li {
+    font-size: 0.85rem;
+    color: #000;
+    /* Black text normally */
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.4s ease;
+    /* Smooth color change */
+}
+
+.service-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #000;
+    /* Black dash normally */
+    transition: color 0.4s ease;
+}
+
+.solution-box:hover .service-list li,
+.solution-box:hover .service-list li::before {
+    color: #fff !important;
+    /* Forces text and dash to white on hover */
+}
+
+/* Graphic Design Box Variation */
+.solution-box.design {
+    background-color: #fafafa;
+}
+
+/* Graphic Design Hover logic */
+.solution-box.design:hover {
+    background-color: #1a1a1a;
+    /* A slightly softer black than the systems boxes */
+    border-color: #1a1a1a;
+    transform: translateY(-5px);
+    /* Adds a "lift" effect for the creative section */
+}
+
+/* Ensure all text inside design boxes turns white on hover */
+.solution-box.design:hover h4,
+.solution-box.design:hover p,
+.solution-box.design:hover .service-list li,
+.solution-box.design:hover .service-list li::before {
+    color: #fff !important;
+}
+
+/* Transition for the lift effect */
+.solution-box {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform, background-color;
+}
+
+/* Compliance Section */
+/* Compliance Image Styles */
+.compliance-icon {
+    height: 60px;
+    /* Fixed height for uniformity */
+    width: auto;
+    filter: grayscale(100%);
+    /* Keeps it minimalist */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.compliance-card:hover .compliance-icon {
+    filter: grayscale(0%);
+    /* Shows original color on hover */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.compliance-grid {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    /* Closing the grid */
+    margin-top: 40px;
+}
+
+.compliance-card {
+    padding: 30px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.compliance-card:last-child {
+    border-right: none;
+}
+
+.compliance-title {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.compliance-status {
+    font-size: 0.65rem;
+    color: #00b894;
+    /* A clean, subtle success green */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* On Mobile, remove the right border and add a bottom one */
+@media (max-width: 768px) {
+    .compliance-card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+footer {
+    padding: 80px 0 40px 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.footer-brand {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+.footer-header {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 60px;
+    letter-spacing: 0.05em;
+}
+
+#formResponse {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.65rem;
+}
+
+.text-success { color: #00b894 !important; }
+.text-danger { color: #ff7675 !important; }
