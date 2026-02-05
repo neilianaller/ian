@@ -154,10 +154,13 @@ body {
 /* Solutions Grid */
 .solution-box {
     border: 1px solid #f0f0f0;
-    padding: 60px 40px;
+    padding: 50px 30px;
+    /* Slightly reduced horizontal padding for 3-column layout */
     height: 100%;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: #fff;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform, background-color;
 }
 
 .solution-box:hover {
@@ -292,11 +295,7 @@ body {
     color: #fff !important;
 }
 
-/* Transition for the lift effect */
-.solution-box {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    will-change: transform, background-color;
-}
+
 
 /* Compliance Section */
 /* Compliance Image Styles */
@@ -411,5 +410,10 @@ footer {
     font-size: 0.65rem;
 }
 
-.text-success { color: #00b894 !important; }
-.text-danger { color: #ff7675 !important; }
+.text-success {
+    color: #00b894 !important;
+}
+
+.text-danger {
+    color: #ff7675 !important;
+}
