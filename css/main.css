@@ -354,10 +354,19 @@ body {
 }
 
 /* On Mobile, remove the right border and add a bottom one */
+/* Ensure the 5th item centers on mobile if it's alone on a row */
 @media (max-width: 768px) {
+    .compliance-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .compliance-card {
         border-right: none;
         border-bottom: 1px solid #eee;
+        min-height: 180px;
+        /* Keeps height consistent */
     }
 }
 
