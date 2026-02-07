@@ -94,3 +94,17 @@ scroller.addEventListener('scroll', () => {
         dot.classList.toggle('active', i === activeIndex);
     });
 });
+
+document.querySelector('.navbar-brand').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.body.classList.toggle('dark-theme');
+    
+    // Save the state
+    const isDark = document.body.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Load saved theme
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}

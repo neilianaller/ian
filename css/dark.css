@@ -1,0 +1,79 @@
+/* Dark Mode Colors */
+body.dark-theme {
+    /* The body itself becomes the dark color AFTER or during the wave */
+    background-color: #0b0b0b !important;
+}
+
+body.dark-theme::before {
+    clip-path: circle(150% at 50% 0%); /* Expands to cover everything */
+    transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Update Navbar and Sections in Dark Mode */
+body.dark-theme .navbar,
+body.dark-theme .hero-section,
+body.dark-theme #systems,
+body.dark-theme #designs,
+body.dark-theme #compliance,
+body.dark-theme footer {
+    background-color: transparent !important;
+    transition: background-color 1.2s ease;
+}
+
+/* Flip Card Colors */
+body.dark-theme .solution-box, 
+body.dark-theme .solution-card-inner {
+    background-color: #161616 !important;
+    border-color: #222 !important;
+    transition: background-color 0.8s ease, border-color 0.8s ease;
+}
+
+/* Ensure text stays visible */
+body.dark-theme .brand-main,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme p,
+body.dark-theme .compliance-title,
+body.dark-theme .category-header {
+    color: #fff !important;
+}
+
+body.dark-theme .category-header {
+    border-bottom-color: #fff;
+}
+
+/* Invert the Logo if it's black (Optional) */
+body.dark-theme .navbar-logo {
+    filter: invert(1) brightness(2);
+}
+
+body.dark-theme .btn-primary-dev {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+
+body.dark-theme .btn-secondary-dev {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #eee;
+}
+
+body.dark-theme .btn-secondary-dev:hover {
+    border-color: #000;
+    background-color: #fafafa;
+    color: #000;
+}
+
+body.dark-theme .service-list li {
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+/* Using Unicode for the dash to prevent encoding errors (å€") */
+body.dark-theme .service-list li::before {
+    color: #fff;
+    transition: color 0.4s ease;
+}
+

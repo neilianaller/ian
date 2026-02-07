@@ -4,6 +4,30 @@ body {
     font-family: 'Google Sans';
     background-color: #ffffff;
     color: #1a1a1a;
+    transition: color 0.5s ease;
+    overflow-x:hidden;
+}
+
+/* Modified Part 1 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0b0b0b;
+    /* Increase this so it's just below the text/navbar links */
+    z-index: 0; 
+    clip-path: circle(0% at 50% 0%);
+    transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+    pointer-events: none; /* Crucial: allows clicks to pass through to the logo */
+}
+
+/* Ensure your main content has a z-index to stay above the wave */
+.navbar, .hero-section, #systems, #designs, #compliance, footer {
+    position: relative;
+    z-index: 1;
 }
 
 /* Hero Section */
@@ -525,7 +549,8 @@ footer {
 }
 
 .social-icon-link {
-    color: #888; /* Matches your footer-link color */
+    color: #888;
+    /* Matches your footer-link color */
     font-size: 1.1rem;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -533,6 +558,8 @@ footer {
 }
 
 .social-icon-link:hover {
-    color: #000; /* Turns solid black on hover */
-    transform: translateY(-2px); /* Subtle lift effect */
+    color: #000;
+    /* Turns solid black on hover */
+    transform: translateY(-2px);
+    /* Subtle lift effect */
 }
