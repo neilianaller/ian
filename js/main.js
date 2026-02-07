@@ -70,3 +70,27 @@ function resetButton() {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+const scroller = document.getElementById('systemScroller');
+const dots = document.querySelectorAll('.dot');
+
+// Function to scroll to a specific card
+function scrollToCard(index) {
+    const cardWidth = scroller.querySelector('.solution-card').offsetWidth;
+    // On desktop we show 3 cards, so index might need adjustment 
+    // depending on if you want to scroll card-by-card or page-by-page.
+    scroller.scrollTo({
+        left: cardWidth * index,
+        behavior: 'smooth'
+    });
+}
+
+// Function to highlight dots based on scroll position
+scroller.addEventListener('scroll', () => {
+    const cardWidth = scroller.querySelector('.solution-card').offsetWidth;
+    const activeIndex = Math.round(scroller.scrollLeft / cardWidth);
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+    });
+});

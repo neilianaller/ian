@@ -151,34 +151,81 @@ body {
     display: block;
 }
 
-/* Solutions Grid */
-.solution-box {
+/* Unified Solutions Styling (For both Grid and Scroller) */
+.solution-box, .solution-card-inner {
     border: 1px solid #f0f0f0;
     padding: 50px 30px;
-    /* Slightly reduced horizontal padding for 3-column layout */
     height: 100%;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: #fff;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     will-change: transform, background-color;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
 }
 
-.solution-box:hover {
+/* Hover State: The "Blackout" Effect */
+.solution-box:hover,
+.solution-card:hover .solution-card-inner {
     border-color: #000;
-    background: #212529;
+    background: #212529 !important;
+    transform: translateY(-5px);
 }
 
-.solution-box:hover h3,
-.solution-box:hover p {
+/* Text Color Shift on Hover */
+.solution-box:hover h3, .solution-box:hover p, .solution-box:hover .solution-number,
+.solution-card:hover h3, .solution-card:hover p, .solution-card:hover .solution-number {
     color: #fff !important;
 }
 
-.solution-number {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #ccc;
-    display: block;
-    margin-bottom: 2rem;
+/* Service List & Dash Fixes */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.service-list li {
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.4s ease;
+}
+
+/* Using Unicode for the dash to prevent encoding errors (å€") */
+.service-list li::before {
+    content: "\2014";
+    /* Standard EM Dash */
+    position: absolute;
+    left: 0;
+    color: #000;
+    transition: color 0.4s ease;
+}
+
+/* Force everything to white on hover */
+.solution-box:hover .service-list li,
+.solution-box:hover .service-list li::before,
+.solution-card:hover .service-list li,
+.solution-card:hover .service-list li::before {
+    color: #fff !important;
+}
+
+/* Scroller Specific Adjustments */
+
+.solution-card {
+    flex: 0 0 33.333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+/* Mobile view: 1 card visible */
+@media (max-width: 768px) {
+    .solution-card {
+        flex: 0 0 100%;
+    }
 }
 
 /* Contact Form */
@@ -425,4 +472,67 @@ footer {
 
 .text-danger {
     color: #ff7675 !important;
+}
+
+.scroller-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #000;
+    transform: scale(1.4);
+}
+
+/* Ensure the scroller snaps perfectly for the dots to work well */
+.horizontal-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    -ms-overflow-style: none !important;
+    /* IE and Edge */
+    scrollbar-width: none !important;
+}
+
+.solution-card {
+    scroll-snap-align: center;
+    /* Better for mobile-to-desktop consistency */
+}
+
+.horizontal-scroller::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+#systems {
+    overflow: hidden;
+}
+
+.social-icon-link {
+    color: #888; /* Matches your footer-link color */
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icon-link:hover {
+    color: #000; /* Turns solid black on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
 }

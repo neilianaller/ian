@@ -1,10 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta
-      name="title"
-      content="IANDEV IT SERVICES"
-    />
+    <meta charset="utf-8" />
+    <meta name="title" content="IANDEV IT SERVICES" />
     <meta
       name="description"
       content="Specializing in HRIS, Information Management Systems, and premium Graphic Design for government and private sectors in the Philippines. Fully NPC and PhilGEPS compliant."
@@ -40,8 +38,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-
     <link rel="icon" type="image/png" sizes="32x32" href="images/LOGO-05.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -92,70 +93,125 @@
       </div>
     </main>
 
-    <div id="systems" class="row g-0 mt-5">
+    <div id="systems" class="row g-0 mt-5 position-relative">
       <div class="col-12 px-4 mb-4 text-center">
         <span class="category-header">Information Systems</span>
       </div>
-      <div class="col-md-4">
-        <div class="solution-box">
-          <span class="solution-number">01</span>
-          <h3 class="fw-bold mb-3">Human Resource IS (HRIS)</h3>
-          <p class="text-muted">
-            A complete digital ecosystem for workforce management.
-          </p>
-          <ul class="service-list">
-            <li>Biometric Log Integration</li>
-            <li>Leave & Absence Tracking</li>
-            <li>Travel Order Management</li>
-            <li>Payroll Ready Data</li>
-          </ul>
+
+      <div class="horizontal-scroller no-scrollbar" id="systemScroller">
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">01</span>
+            <h3 class="fw-bold mb-3">Human Resource IS (HRIS)</h3>
+            <p class="text-muted small">
+              A complete digital ecosystem for workforce management.
+            </p>
+            <ul class="service-list small">
+              <li>Biometric Log Integration</li>
+              <li>Leave & Absence Tracking</li>
+              <li>Travel Order Management</li>
+              <li>Payroll Ready Data</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">02</span>
+            <h3 class="fw-bold mb-3">Parish Info System</h3>
+            <p class="text-muted small">
+              Centralized management for church records and members.
+            </p>
+            <ul class="service-list small">
+              <li>Sacramental Records</li>
+              <li>Member Directory</li>
+              <li>Certificates Generation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">03</span>
+            <h3 class="fw-bold mb-3">Messenger ChatBot</h3>
+            <p class="text-muted small">
+              Automated 24/7 engagement for inquiry handling.
+            </p>
+            <ul class="service-list small">
+              <li>Automated FAQs</li>
+              <li>Inquiry Routing</li>
+              <li>Live Agent Handover</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">04</span>
+            <h3 class="fw-bold mb-3">Data Management</h3>
+            <p class="text-muted small">
+              Secure cloud-ready systems for institutional data.
+            </p>
+            <ul class="service-list small">
+              <li>Cloud Archiving</li>
+              <li>Advanced Filters</li>
+              <li>Role-based Access</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">05</span>
+            <h3 class="fw-bold mb-3">Student Portal</h3>
+            <p class="text-muted small">
+              Self-service academic dashboard for students.
+            </p>
+            <ul class="service-list small">
+              <li>Grades Viewing</li>
+              <li>Course Enrollment</li>
+              <li>Digital IDs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-inner">
+            <span class="solution-number">06</span>
+            <h3 class="fw-bold mb-3">Events Registration</h3>
+            <p class="text-muted small">
+              Scalable booking system for seminars and events.
+            </p>
+            <ul class="service-list small">
+              <li>QR Code Checking</li>
+              <li>Automated Invoicing</li>
+              <li>Attendance Analytics</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="solution-box">
-          <span class="solution-number">02</span>
-          <h3 class="fw-bold mb-3">Information Management</h3>
-          <p class="text-muted">
-            Centralized systems for data integrity and retrieval.
-          </p>
-          <ul class="service-list">
-            <li>Data Management Systems</li>
-            <li>Digital Records Archiving</li>
-            <li>Secure Cloud Integration</li>
-            <li>Custom Search & Filters</li>
-          </ul>
-        </div>
+      <div class="scroller-dots" id="scrollerDots">
+        <span class="dot active" onclick="scrollToCard(0)"></span>
+        <span class="dot" onclick="scrollToCard(1)"></span>
+        <span class="dot" onclick="scrollToCard(2)"></span>
+        <span class="dot" onclick="scrollToCard(3)"></span>
       </div>
+    </div>
 
-      <div class="col-md-4">
-        <div class="solution-box">
-          <span class="solution-number">03</span>
-          <h3 class="fw-bold mb-3">Messenger ChatBot</h3>
-          <p class="text-muted">
-            Automated 24/7 engagement for public and private inquiry handling.
-          </p>
-          <ul class="service-list">
-            <li>Automated FAQs</li>
-            <li>Inquiry & Ticket Routing</li>
-            <li>Live Agent Handover</li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="designs" class="col-12 px-4 mt-5 mb-4 text-center">
+    <div id="designs" class="row g-0 mt-5">
+      <div class="col-12 px-4 mb-4 text-center">
         <span class="category-header">Graphic Design</span>
       </div>
-
-      <div class="col-md-6">
+      <div class="col-md-6 px-2">
         <div class="solution-box design">
           <h4 class="fw-bold">Visual Identity</h4>
           <p class="small text-muted">
-            Logos, branding kits, and style guides that define your presence.
+            Logos, branding kits, and style guides.
           </p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 px-2">
         <div class="solution-box design">
           <h4 class="fw-bold">Print & Media</h4>
           <p class="small text-muted">
@@ -318,8 +374,16 @@
             <a href="mailto:neil@neilian.dev" class="footer-link"
               >neil@neilian.dev</a
             >
-
-            <!-- <a href="#" class="footer-link">Facebook</a> -->
+            <a href="tel:+639774702672" class="footer-link">+63 977 470 2672</a>
+            <div class="mt-3">
+              <a
+                href="https://facebook.com/neilian.dev"
+                target="_blank"
+                class="social-icon-link"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
