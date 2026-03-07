@@ -563,3 +563,84 @@ footer {
     transform: translateY(-2px);
     /* Subtle lift effect */
 }
+
+.bg-dark-accent {
+  background-color: #0a0a0a; /* Slightly lighter than pure black to create depth */
+}
+
+.case-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.case-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #007bff; /* Or your brand primary color */
+  transform: translateY(-5px);
+}
+
+.case-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #007bff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.case-stats {
+  display: flex;
+  gap: 30px;
+  margin: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.case-link {
+  font-size: 0.85rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.case-link:hover {
+  color: #007bff;
+}
+
+.case-study-hero {
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+}
+
+.case-detail-row p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* For that IANDEV look, make the numbers big and thin */
+.case-detail-row span.text-warning {
+    font-size: 3rem;
+}
