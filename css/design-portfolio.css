@@ -1,0 +1,66 @@
+/* Minimalist Grid Setup */
+.portfolio-grid-minimal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 Columns */
+    gap: 20px;
+    /* Space between items */
+    margin-bottom: 20px;
+}
+
+.portfolio-card {
+    position: relative;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Professional easing */
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 80%;
+    height: auto;
+    display: block;
+    /* filter: brightness(0.9); */
+    transition: filter 0.3s ease;
+}
+
+/* Float & Shadow Effect */
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    filter: brightness(0.9);
+    /* The "Float" bit */
+}
+
+.portfolio-card:hover img {
+    filter: brightness(1);
+}
+
+/* Minimalist Overlay Label */
+.hover-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffc107;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .hover-label {
+    opacity: 1;
+}
+
+/* Responsive Handling */
+@media (max-width: 992px) {
+    .portfolio-grid-minimal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-grid-minimal {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

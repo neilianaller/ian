@@ -5,7 +5,8 @@ body.dark-theme {
 }
 
 body.dark-theme::before {
-    clip-path: circle(150% at 50% 0%); /* Expands to cover everything */
+    clip-path: circle(150% at 50% 0%);
+    /* Expands to cover everything */
     transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -21,7 +22,7 @@ body.dark-theme footer {
 }
 
 /* Flip Card Colors */
-body.dark-theme .solution-box, 
+body.dark-theme .solution-box,
 body.dark-theme .solution-card-inner {
     background-color: #161616 !important;
     border-color: #222 !important;
@@ -77,3 +78,90 @@ body.dark-theme .service-list li::before {
     transition: color 0.4s ease;
 }
 
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+
+    /* Hero Section scaling */
+    .brand-main {
+        font-size: 15vw;
+        /* Scales with screen width */
+        line-height: 1;
+    }
+
+    .brand-sub {
+        letter-spacing: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Systems Scroller Mobile Fix */
+    .horizontal-scroller {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .solution-card {
+        flex: 0 0 85%;
+        /* Shows a peek of the next card */
+        scroll-snap-align: center;
+        margin-right: 15px;
+    }
+
+    /* Stack buttons on mobile */
+    .btn-iandev {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust Case Study Hero Buttons */
+    .case-study-hero .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+
+    /* Compliance Icons */
+    .compliance-icon {
+        max-width: 60px;
+    }
+
+    .compliance-card {
+        padding: 15px 5px;
+    }
+
+    /* Navbar padding fix */
+    .navbar-logo {
+        height: 25px;
+    }
+}
+
+.dropdown-item:hover {
+    background-color: #ffc107;
+    /* Bootstrap warning color */
+    color: #000 !important;
+}
+
+.dropdown-item {
+    transition: all 0.2s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.category-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

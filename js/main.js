@@ -51,7 +51,8 @@ async function handleSubmit(event) {
               .map((error) => error["message"])
               .join(", ");
           } else {
-            formstatus.innerHTML = "Oops! There was a problem submitting your form";
+            formstatus.innerHTML =
+              "Oops! There was a problem submitting your form";
           }
           resetButton();
         });
@@ -59,7 +60,8 @@ async function handleSubmit(event) {
     })
     .catch((error) => {
       formstatus.classList.add("text-danger");
-      formstatus.innerHTML = "Oops! There was a problem connecting to the server";
+      formstatus.innerHTML =
+        "Oops! There was a problem connecting to the server";
       resetButton();
     });
 }
@@ -71,40 +73,41 @@ function resetButton() {
 
 form.addEventListener("submit", handleSubmit);
 
-const scroller = document.getElementById('systemScroller');
-const dots = document.querySelectorAll('.dot');
+const scroller = document.getElementById("systemScroller");
+const dots = document.querySelectorAll(".dot");
 
 // Function to scroll to a specific card
 function scrollToCard(index) {
-    const cardWidth = scroller.querySelector('.solution-card').offsetWidth;
-    // On desktop we show 3 cards, so index might need adjustment 
-    // depending on if you want to scroll card-by-card or page-by-page.
+  const scroller = document.getElementById("systemScroller");
+  const cards = scroller.querySelectorAll(".solution-card");
+  if (cards[index]) {
     scroller.scrollTo({
-        left: cardWidth * index,
-        behavior: 'smooth'
+      left: cards[index].offsetLeft - 20, // Adjusted for mobile padding
+      behavior: "smooth",
     });
+  }
 }
 
 // Function to highlight dots based on scroll position
-scroller.addEventListener('scroll', () => {
-    const cardWidth = scroller.querySelector('.solution-card').offsetWidth;
-    const activeIndex = Math.round(scroller.scrollLeft / cardWidth);
-    
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === activeIndex);
-    });
+scroller.addEventListener("scroll", () => {
+  const cardWidth = scroller.querySelector(".solution-card").offsetWidth;
+  const activeIndex = Math.round(scroller.scrollLeft / cardWidth);
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === activeIndex);
+  });
 });
 
-document.querySelector('.navbar-brand').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.body.classList.toggle('dark-theme');
-    
-    // Save the state
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+// document.querySelector(".navbar-brand").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   document.body.classList.toggle("dark-theme");
+
+//   // Save the state
+//   const isDark = document.body.classList.contains("dark-theme");
+//   localStorage.setItem("theme", isDark ? "dark" : "light");
+// });
 
 // Load saved theme
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-theme");
 }

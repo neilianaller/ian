@@ -58,6 +58,7 @@ body::before {
     letter-spacing: 0.8em;
     color: #888;
     margin-right: -0.6em;
+    text-align: center;
     /* Offsets the letter spacing to keep it centered */
 }
 
@@ -643,4 +644,8 @@ footer {
 /* For that IANDEV look, make the numbers big and thin */
 .case-detail-row span.text-warning {
     font-size: 3rem;
+}
+
+p {
+    text-align: justify;
 }
