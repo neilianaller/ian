@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# 1. Remove .html from the URL (Redirects user to the extensionless URL)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# 2. Check for the .html file internally if no extension is provided
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+Options -Indexes
