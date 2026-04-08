@@ -17,8 +17,8 @@ Options -Indexes
     Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
     # 2. CSP (Content-Security-Policy)
-    # Most critical: only allows scripts/styles from your own domain
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';"
+# 2. Updated CSP for GLightbox compatibility
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';"
 
     # 3. X-Frame-Options
     # Prevents "Clickjacking" (others cannot put your site in an iframe)
