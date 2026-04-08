@@ -10,3 +10,29 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 Options -Indexes
+
+<IfModule mod_headers.c>
+    # 1. HSTS (Strict-Transport-Security)
+    # Forces HTTPS for 1 year (only use if you have SSL/HTTPS active)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # 2. CSP (Content-Security-Policy)
+    # Most critical: only allows scripts/styles from your own domain
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';"
+
+    # 3. X-Frame-Options
+    # Prevents "Clickjacking" (others cannot put your site in an iframe)
+    Header set X-Frame-Options "DENY"
+
+    # 4. X-Content-Type-Options
+    # Prevents browsers from guessing MIME types (stops Mime-Sniffing)
+    Header set X-Content-Type-Options "nosniff"
+
+    # 5. Referrer-Policy
+    # Protects privacy by not sending your URL details when clicking external links
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # 6. Permissions-Policy
+    # Disables unwanted browser features like camera, microphone, and geolocation
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+</IfModule>
