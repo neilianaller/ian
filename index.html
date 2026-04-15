@@ -38,8 +38,21 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/dark.css" />
+
+    <script>
+      (function () {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        // Date.now() creates a unique timestamp like 1712754000000
+        link.href = "css/main.css?v=" + Date.now();
+        document.head.appendChild(link);
+      })();
+    </script>
+
+    <noscript>
+      <link rel="stylesheet" href="css/main.css" />
+    </noscript>
+
     <link rel="icon" type="image/png" sizes="32x32" href="images/LOGO-05.png" />
     <link
       rel="stylesheet"
@@ -65,7 +78,6 @@
         <div class="row">
           <div class="col-12 text-center">
             <h1 class="brand-main">IANDEV</h1>
-            <span class="brand-sub">IT SERVICES</p>
           </div>
         </div>
       </div>

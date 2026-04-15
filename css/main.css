@@ -32,7 +32,7 @@ body::before {
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
