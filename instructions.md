@@ -91,4 +91,37 @@ All placeholders to replace later:
 - All animations should respect `prefers-reduced-motion`.
 - Mobile-first responsive design throughout.
 - USE LESSER TOKENS AS MUCH AS POSSIBLE.
-The above content shows the entire, complete file contents of the requested file.
+
+---
+
+## SEO & Search Console Setup
+
+### Meta Tags & Open Graph
+- ✅ **Page Title:** 52 characters — optimized for search results and social previews
+- ✅ **Meta Description:** ~140 characters — Google truncates around 150–160
+- ✅ **og:description:** ~85 characters — Social previews show ~125 characters
+- ✅ **og:site_name:** "IANDEV" — Shows on Discord and other platforms
+- ✅ **og:image:** References `/og-image.png` (create a 1200x630px image for best results)
+- ✅ **Canonical URL:** Set to prevent duplicate content issues
+- ✅ **JSON-LD Structured Data:** Person schema for rich snippets
+
+### Sitemap & Robots
+- ✅ **Sitemap:** Auto-generated at `/public/sitemap.xml` — lists all indexable pages
+- ✅ **Robots.txt:** Located at `/public/robots.txt` — directs crawlers to sitemap
+
+### Google Search Console Setup
+1. Go to [search.google.com/search-console](https://search.google.com/search-console)
+2. Add property: `https://iandev-c5fc3.web.app`
+3. Verify ownership (use DNS, HTML file, or Google Analytics)
+4. Submit sitemap: Add `/sitemap.xml` to GSC
+5. Monitor:
+   - Indexing status
+   - Search performance (clicks, impressions, CTR)
+   - Mobile usability
+   - Core Web Vitals
+
+### Next Steps
+- Create a 1200x630px Open Graph image and save as `public/og-image.png`
+- Update social media links in JSON-LD schema
+- Monitor GSC for indexing and ranking issues
+- Update sitemap `lastmod` dates when content changes
