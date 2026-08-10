@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import CaseStudies from './pages/CaseStudies';
 import DesignPortfolio from './pages/DesignPortfolio';
+import Stories from './pages/Stories';
+import Story from './pages/Story';
 import './App.css';
 
 // Scroll to top or specific hash on route transitions
@@ -42,6 +44,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/design" element={<DesignPortfolio />} />
+            <Route path="/stories" element={<Stories />} />
+            <Route path="/stories/:slug" element={<Story />} />
           </Routes>
         </main>
         <Footer />

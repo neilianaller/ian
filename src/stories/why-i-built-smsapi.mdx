@@ -1,0 +1,55 @@
+---
+title: Why I Built SMSAPI
+slug: why-i-built-smsapi
+app: SMSAPI
+hook: Empowering developers and students to build with SMS, using hardware they already own.
+date: 2024-07-08
+ogImage: /assets/smsapi.png
+---
+
+## The Barrier
+
+I was mentoring a computer science student in Davao. She had a brilliant idea for an SMS-based app—a way to send alerts to farmers in rural areas where internet is unreliable but SMS works everywhere.
+
+The problem? SMS APIs cost money. Twilio. AWS. Firebase. All require credit cards and ongoing charges. For a student building a proof-of-concept, it's a barrier to entry.
+
+She asked me: *"Is there another way?"*
+
+I thought about it. Every smartphone has SMS built in. Every SIM card can send text messages. Why should you need to pay a third party just to use technology you already own?
+
+## The Insight
+
+That's when it clicked: What if developers could use their own Android phone as an SMS gateway?
+
+It sounds simple, but it unlocked something powerful. A computer science student in the Philippines could build SMS-based applications without paying a subscription. An NGO could send alerts to thousands of people at minimal cost. A researcher could run experiments with real mobile networks, real latency, real behavior.
+
+## Building SMSAPI
+
+The technical challenge was interesting: creating a bridge between HTTP requests and your phone's SMS capability. 
+
+The app needed to:
+- Run as a persistent service on an Android device
+- Listen for HTTP requests from a local or remote server
+- Send SMS messages using the phone's built-in capabilities
+- Provide a simple, developer-friendly API
+- Work on both older and newer Android versions
+- Be secure without being burdensome
+
+I built SMSAPI to be:
+- **Free.** No subscriptions. No API keys you need to pay for.
+- **Flexible.** Use it for SMS alerts, OTP delivery, bulk messaging, whatever you need.
+- **Local.** Your API calls, your data, your phone.
+- **Beginner-friendly.** Clear documentation and examples.
+
+## The Impact
+
+The student I was mentoring built her app. It went into pilot testing with five farming cooperatives. Farmers got alerts about water levels, weather, market prices—delivered via SMS to their most basic phones.
+
+She didn't have to ask for funding. She didn't have to convince investors. She just needed a tool that respected her constraints.
+
+That's what SMSAPI is: a tool built for the real world, not the Silicon Valley world.
+
+---
+
+**Start building with SMS.**
+[Get SMSAPI on Google Play →](https://play.google.com/store/apps/details?id=com.iandev.smsapi)

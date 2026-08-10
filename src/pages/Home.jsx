@@ -2,11 +2,13 @@
 import ProjectCard from "../components/ProjectCard";
 import AppCard from "../components/AppCard";
 import DesignThumb from "../components/DesignThumb";
+import StoryCard from "../components/StoryCard";
 import ContactForm from "../components/ContactForm";
 import { projects } from "../data/projects";
 import { apps } from "../data/apps";
 import { designs } from "../data/designs";
 import { clients } from "../data/clients";
+import { getLatestStories } from "../data/stories";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -143,11 +145,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stories Teaser */}
+      <section id="stories" className="py-24 px-4 max-w-7xl mx-auto border-b border-border/50">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span className="text-accent font-mono text-xs uppercase tracking-widest block mb-2">// 03 / Behind the Build</span>
+            <h2 className="text-3xl md:text-5xl font-heading text-text font-extrabold uppercase">Stories</h2>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <a
+              href="/stories"
+              className="inline-block px-6 py-2.5 border border-accent/40 text-accent font-mono text-sm tracking-wider uppercase rounded hover:bg-accent-bg hover:border-accent transition duration-200"
+            >
+              Read All Stories →
+            </a>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {getLatestStories(2).map((story, index) => (
+            <motion.div
+              key={story.slug}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <StoryCard story={story} />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Design Teaser */}
       <section id="design" className="py-24 px-4 max-w-7xl mx-auto border-b border-border/50">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span className="text-accent font-mono text-xs uppercase tracking-widest block mb-2">// 03 / UI & Graphic Artworks</span>
+            <span className="text-accent font-mono text-xs uppercase tracking-widest block mb-2">// 04 / UI & Graphic Artworks</span>
             <h2 className="text-3xl md:text-5xl font-heading text-text font-extrabold uppercase">Design Work</h2>
           </div>
           <div className="mt-4 md:mt-0">

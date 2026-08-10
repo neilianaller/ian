@@ -40,7 +40,7 @@ export default function CaseStudies() {
     },
     {
       id: 2,
-      title: "MSWDO Information Management System",
+      title: "AICS Information Management System",
       subtitle: "Government Social Welfare Management Registry",
       role: "Lead Fullstack Developer",
       duration: "2 Months (2025)",

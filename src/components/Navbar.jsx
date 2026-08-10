@@ -29,6 +29,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Work', to: '/' },
+    { name: 'Stories', to: '/stories' },
     { name: 'Case Studies', to: '/case-studies' },
     { name: 'Design', to: '/design' },
     { name: 'Contact', to: '/#contact' },
