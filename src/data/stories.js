@@ -1,62 +1,89 @@
-import { apps } from './apps';
+import { appsStories } from './app-stories';
 
 // Story metadata extracted from frontmatter
 export const storyMetadata = [
-  {
-    slug: 'why-i-built-dailyask',
-    title: 'Why I Built DailyAsk',
-    app: 'DailyAsk',
-    hook: 'Bringing daily reflection to Android in an intentional, distraction-free way.',
-    date: '2024-03-15',
-    ogImage: '/assets/dailyask.png',
-  },
-  {
-    slug: 'why-i-built-medtrack',
-    title: 'Why I Built MedTrack',
-    app: 'MedTrack',
-    hook: 'Making medication management simple, free, and accessible to everyone.',
-    date: '2024-05-22',
-    ogImage: '/assets/medtrack.png',
-  },
-  {
-    slug: 'why-i-built-smsapi',
-    title: 'Why I Built SMSAPI',
-    app: 'SMSAPI',
-    hook: 'Empowering developers and students to build with SMS, using hardware they already own.',
-    date: '2024-07-08',
-    ogImage: '/assets/smsapi.png',
-  },
-  {
-    slug: 'why-i-built-runnerspod',
-    title: 'Why I Built RunnersPod',
-    app: 'RunnersPod',
-    hook: 'Turning running data into storytelling—for solo runners and running communities.',
-    date: '2024-08-10',
-    ogImage: '/assets/runnerspod.png',
-  },
+  // {
+  //   slug: 'why-i-built-dailyask',
+  //   title: 'Why I Built DailyAsk',
+  //   app: 'DailyAsk',
+  //   hook: 'Bringing daily Catholic reflection in an intentional, distraction-free way.',
+  //   date: '2024-03-15',
+  //   ogImage: '/assets/dailyask.png',
+  // },
+  // {
+  //   slug: 'why-i-built-medtrack',
+  //   title: 'Why I Built MedTrack',
+  //   app: 'MedTrack',
+  //   hook: 'An offline, privacy first, ad-free family health companion.',
+  //   date: '2026-08-12',
+  //   ogImage: '/assets/medtrack.png',
+  // },
+  // {
+  //   slug: 'why-i-built-smsapi',
+  //   title: 'Why I Built SMSAPI',
+  //   app: 'SMSAPI',
+  //   hook: 'Turn your Android phone into a powerful SMS Gateway.',
+  //   date: '2026-08-12',
+  //   ogImage: '/assets/smsapi-logo.png',
+  // },
+  // {
+  //   slug: 'why-i-built-runnerspod',
+  //   title: 'Why I Built RunnersPod',
+  //   app: 'RunnersPod',
+  //   date: '2026-08-10',
+  //   hook: 'Connecting every runner, every race.',
+  //   ogImage: '/assets/runnerspod-logo.png',
+  // },
+  // {
+  //   slug: 'why-i-built-cenacle',
+  //   title: 'Why I Built Cenacle',
+  //   app: 'Cenacle',
+  //   date: '2026-08-12',
+  //   hook: 'A sacred space for anyone to gather in prayer.',
+  //   ogImage: '/assets/cenacle-logo.webp',
+  // },
+  // {
+  //   slug: 'why-i-built-gabaystrand',
+  //   title: 'Why I Built GabayStrand',
+  //   app: 'GabayStrand',
+  //   date: '2026-08-12',
+  //   hook: 'Take our multi-dimensional assessment to find the perfect track for your skills, interests, and future career goals.',
+  //   ogImage: '/assets/gabaystrand-logo.webp',
+  // },
+  // {
+  //   slug: 'why-i-built-wanminit',
+  //   title: 'Why I Built Wanminit with Fr. Elric Web',
+  //   app: 'Wanminit with Fr. Elric Web',
+  //   date: '2026-08-12',
+  //   hook: 'A sacred archive of daily one-minute Gospel reflections.',
+  //   ogImage: '/assets/wanminit-logo.webp',
+  // },
 ];
 
-// Get story metadata with app icon
+// Get story metadata with project icon & store/project URL
 export function getStory(slug) {
   const story = storyMetadata.find(s => s.slug === slug);
   if (!story) return null;
 
-  const app = apps.find(a => a.name === story.app);
+  const project = appsStories.find(a => a.name === story.app || a.name === story.project);
   return {
     ...story,
-    icon: app?.icon,
-    storeUrl: app?.storeUrl,
+    icon: project?.icon || story.ogImage,
+    storeUrl: project?.storeUrl,
   };
 }
 
 // Get all stories sorted by date (newest first)
 export function getAllStories() {
   return storyMetadata
-    .map(story => ({
-      ...story,
-      icon: apps.find(a => a.name === story.app)?.icon,
-      storeUrl: apps.find(a => a.name === story.app)?.storeUrl,
-    }))
+    .map(story => {
+      const project = appsStories.find(a => a.name === story.app || a.name === story.project);
+      return {
+        ...story,
+        icon: project?.icon || story.ogImage,
+        storeUrl: project?.storeUrl,
+      };
+    })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 

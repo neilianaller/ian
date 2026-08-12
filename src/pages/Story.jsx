@@ -10,6 +10,8 @@ const storyModules = {
   'why-i-built-medtrack': lazy(() => import('../stories/why-i-built-medtrack.mdx')),
   'why-i-built-smsapi': lazy(() => import('../stories/why-i-built-smsapi.mdx')),
   'why-i-built-runnerspod': lazy(() => import('../stories/why-i-built-runnerspod.mdx')),
+  'why-i-built-cenacle': lazy(() => import('../stories/why-i-built-cenacle.mdx')),
+  'why-i-built-gabaystrand': lazy(() => import('../stories/why-i-built-gabaystrand.mdx')),
 };
 
 export default function Story() {
@@ -31,7 +33,9 @@ export default function Story() {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  if (!story) {
+  const StoryContent = storyModules[slug];
+
+  if (!story || !StoryContent) {
     return (
       <div className="flex-grow flex items-center justify-center py-32 px-4">
         <div className="text-center">
@@ -47,8 +51,6 @@ export default function Story() {
       </div>
     );
   }
-
-  const StoryContent = storyModules[slug];
 
   return (
     <div className="flex-grow">
@@ -126,14 +128,14 @@ export default function Story() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <p className="text-text/70 mb-6 font-sans">Ready to try it?</p>
+              <p className="text-text/70 mb-6 font-sans">Ready to check it out?</p>
               <a
                 href={story.storeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-accent text-primary font-mono font-bold uppercase tracking-wider rounded hover:bg-[#a3f03b] active:scale-95 transition-all"
               >
-                Check out {story.app} →
+                Check out {story.app || story.project} →
               </a>
             </motion.div>
           </div>
