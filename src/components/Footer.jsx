@@ -19,9 +19,10 @@ export default function Footer() {
 
         <nav className="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider font-bold">
           <Link to="/" className="hover:text-accent transition duration-200">[01] Home</Link>
-          <Link to="/case-studies" className="hover:text-accent transition duration-200">[02] Case Studies</Link>
-          <Link to="/design" className="hover:text-accent transition duration-200">[03] Design Portfolio</Link>
-          <a href="/#contact" className="hover:text-accent transition duration-200">[04] Hire Me</a>
+          <Link to="/stories" className="hover:text-accent transition duration-200">[02] Stories</Link>
+          <Link to="/case-studies" className="hover:text-accent transition duration-200">[03] Case Studies</Link>
+          <Link to="/design" className="hover:text-accent transition duration-200">[04] Design Portfolio</Link>
+          <a href="/#contact" className="hover:text-accent transition duration-200">[05] Work With Me</a>
         </nav>
       </div>
     </footer>

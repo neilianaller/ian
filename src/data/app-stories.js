@@ -55,4 +55,12 @@ export const appsStories = [
     storeUrl: "https://wanminit-frelric.vercel.app",
     icon: "/assets/wanminit-logo.webp",
   },
+  {
+    id: 8,
+    name: "Marriage is Beautiful web",
+    description: "Share your reasons why the world celebrates marriage.",
+    platforms: ["Web"],
+    storeUrl: "https://marriage-is-beautiful.web.app",
+    icon: "/assets/marriage-is-beautiful-logo.svg",
+  },
 ];

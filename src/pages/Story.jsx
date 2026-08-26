@@ -12,6 +12,8 @@ const storyModules = {
   'why-i-built-runnerspod': lazy(() => import('../stories/why-i-built-runnerspod.mdx')),
   'why-i-built-cenacle': lazy(() => import('../stories/why-i-built-cenacle.mdx')),
   'why-i-built-gabaystrand': lazy(() => import('../stories/why-i-built-gabaystrand.mdx')),
+  'why-i-built-wanminit': lazy(() => import('../stories/why-i-built-wanminit.mdx')),
+  'why-i-built-marriage': lazy(() => import('../stories/why-i-built-marriage.mdx')),
 };
 
 export default function Story() {
