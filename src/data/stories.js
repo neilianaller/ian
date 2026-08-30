@@ -42,14 +42,14 @@ export const storyMetadata = [
   //   hook: 'A sacred space for anyone to gather in prayer.',
   //   ogImage: '/assets/cenacle-logo.webp',
   // },
-  // {
-  //   slug: 'why-i-built-gabaystrand',
-  //   title: 'Why I Built GabayStrand',
-  //   app: 'GabayStrand',
-  //   date: '2026-08-12',
-  //   hook: 'Take our multi-dimensional assessment to find the perfect track for your skills, interests, and future career goals.',
-  //   ogImage: '/assets/gabaystrand-logo.webp',
-  // },
+  {
+    slug: 'why-i-built-gabaystrand',
+    title: 'Why I Built GabayStrand',
+    app: 'GabayStrand',
+    date: '2026-08-12',
+    hook: 'Take our multi-dimensional assessment to find the perfect track for your skills, interests, and future career goals.',
+    ogImage: '/assets/gabaystrand-logo.webp',
+  },
   {
     slug: 'why-i-built-wanminit',
     title: 'Why I Built Wanminit with Fr. Elric Web',
