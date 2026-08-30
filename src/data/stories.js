@@ -34,14 +34,14 @@ export const storyMetadata = [
     hook: 'Connecting every runner, every race.',
     ogImage: '/assets/runnerspod-logo.png',
   },
-  // {
-  //   slug: 'why-i-built-cenacle',
-  //   title: 'Why I Built Cenacle',
-  //   app: 'Cenacle',
-  //   date: '2026-08-12',
-  //   hook: 'A sacred space for anyone to gather in prayer.',
-  //   ogImage: '/assets/cenacle-logo.webp',
-  // },
+  {
+    slug: 'why-i-built-cenacle',
+    title: 'Why I Built Cenacle',
+    app: 'Cenacle',
+    date: '2026-08-12',
+    hook: 'A sacred space for anyone to gather in prayer.',
+    ogImage: '/assets/cenacle-logo.webp',
+  },
   {
     slug: 'why-i-built-gabaystrand',
     title: 'Why I Built GabayStrand',

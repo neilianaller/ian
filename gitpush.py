@@ -19,9 +19,9 @@ def run_git_commands():
         
         print(f"Successfully pushed changes with message: '{commit_message}'")
 
-        subprocess.run(["npm", "run", "build"], check=True, shell=True)
+        # subprocess.run(["npm", "run", "build"], check=True, shell=True)
         
-        subprocess.run(["firebase", "deploy", "--only", "hosting"], check=True, shell=True)
+        # subprocess.run(["firebase", "deploy", "--only", "hosting"], check=True, shell=True)
                         
         print(f"Successfully pushed deployed to Firebase Hosting'")
         
